@@ -1,2 +1,2 @@
 # Transformer_Rainfall-Runoff
-Kangmin's MSc thesis record
+Kangmin's MSc thesis code record
