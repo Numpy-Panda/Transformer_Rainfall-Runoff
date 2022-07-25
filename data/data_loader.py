@@ -13,7 +13,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 '''Load the time series data'''
-'''This script will return '''
+'''This script will return the preprocessed data'''
 
 
 
