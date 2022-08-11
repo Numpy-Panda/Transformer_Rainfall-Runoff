@@ -1,0 +1,99 @@
+### SIMULATION, CALIBRATION AND VALIDATION PERIODS
+
+The starting date of the time series of streamflow measurements defines the simulation, calibration and validation periods. These periods are catchment dependent.
+
+Simulation: Simulations start on the first Oct 1st following the start of the streamflow time series. For the large majority of the stations (598 stations), that is Oct 1st, 1980. For other stations, for which the streamflow time series starts later, the hydrological simulations starts on a later hydrological year (see table below). All hydrological simulations end on 2010/09/30 (update here). 
+
+Starting date of the hydrological simulation: 19801001 19811001 19821001 19831001 19841001 19851001 19861001 19871001 19881001 19891001
+Number of catchments:                           598        4       12       14        5       10       10       5         7        6
+
+Calibration: The first 15 hydrological years of the simulation are used for calibration: for the 598 stations 1980-1995 is used, but for the other stations, this 15-year period is shifted (i.e. postponed, see table above). 
+### SIMULATION, CALIBRATION AND VALIDATION PERIODS
+
+The starting date of the time series of streamflow measurements defines the simulation, calibration and validation periods. These periods are catchment dependent.
+
+Simulation: Simulations start on the first Oct 1st following the start of the streamflow time series. For the large majority of the stations (598 stations), that is Oct 1st, 1980. For other stations, for which the streamflow time series starts later, the hydrological simulations starts on a later hydrological year (see table below). All hydrological simulations end on 2010/09/30 (update here). 
+
+Starting date of the hydrological simulation: 19801001 19811001 19821001 19831001 19841001 19851001 19861001 19871001 19881001 19891001
+Number of catchments:                            598       4       12       14        5       10       10        5        7        6
+
+Calibration: The first 15 hydrological years of the simulation are used for calibration: for the 598 stations 1980-1995 is used, but for the other stations, this 15-year period is shifted (i.e. postponed, see table above). 
+ 
+Validation: The years following the calibration period are used for validation. For the 597 stations, 15 years are used for the validation (1995 to 2010). For the other stations, the validation period is shorter, since all hydrological simulations end on 2010/09/30. 
+
+### CALIBRATION
+
+Calibration is based on the first 15 hydrological years (see above).
+For spin up, the first year was run repeatedly until the soil moisture stabilized.
+Then the best parameter set (objective function?) was used to run SAC over the validation period (typically 15 years, but less for some stations, see above).
+For the validation period, the first year was run repeatedly until soil moisture stabilized, in order not to take advantage of the calibration period.
+The calibration and validation periods were then glued together => there is a jump in discharge were the two periods were glued together
+
+
+### CATCHMENT DELINATION
+
+Two methods:
+- Geospatial Fabric: based on NHD+, smoothed on a 100m grid, product of a collaboration with another research group, delivers HRU and can be used for streamflow routing using mizuRoute. That is the dataset used by Andy
+- Gauges II: produced for USGS, more accurate, but only contours
+
+Absolute relative error less than:        1%       5%     10%     20%     50% 
+Number of catchments:                    385      561     609     637     655
+Proportion of catchments:                57%      84%     91%     95%     98%
+
+See Bock et al. (2015), Parameter regionalization of a monthly water balance model for the conterminous United States
+in Hydrologic and Earth System Sciences for a discussion of the GF and differences with GAGES-II.
+
+### QUALITY OF DISCHARGE DATA
+
+Each time step of the streamflow time series is marked by one these three quality flags:
+
+- A: measured discharge
+- A:e: discharge estimated via various USGS methods
+- M: missing data (discharge marked -999)
+
+Proportion of estimated discharge less than:     1%     5%     10%     20%     50% 
+Number of catchments:                            26    331     483     592     671
+Proportion of catchments:                        4%    49%     72%     88%    100%
+ 
+For 39  basins, entire hydrological years are missing and are marked as such in the observational data
+with missing values for flow (-999) and QC flags (M) 
+
+01208990
+01613050
+02051000
+02235200
+02310947
+02408540
+02464146
+03066000
+03159540
+03161000
+03187500
+03281100
+03300400
+03450000
+05062500
+05087500
+06037500
+06043500
+06188000
+06441500
+07290650
+07295000
+07373000
+07376000
+07377000
+08025500
+08155200
+09423350
+09484000
+09497800
+09505200
+10173450
+10258000
+12025000
+12043000
+12095000
+12141300
+12374250
+13310700
